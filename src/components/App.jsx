@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
-
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
@@ -61,37 +60,3 @@ export const App = () => {
     </Container>
   );
 };
-
-//export class App extends Component {
-//state = {
-//contacts: [],
-//filter: '',
-//};
-
-//componentDidMount() {
-//console.log('App componentDidMount');
-
-//const contacts = localStorage.getItem('contacts');
-//const parsedContacts = JSON.parse(contacts);
-
-//if(parsedContacts){
-// this.setState({contacts: parsedContacts});
-//}
-
-//console.log(parsedContacts);
-//const contacts = JSON.parse(localStorage.getItem("my-contacts"));
-//this.setState({contacts})
-//}
-
-//componentDidUpdate(prevProps, prevState) {
-//console.log('App componentDidUpdate');
-
-// if(this.state.contacts !== prevState.contacts){
-//console.log('Оновилось поле contacts, записую contacts в сховище');
-
-// localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
-//}
-//const {contacts} = this.state;
-//localStorage.setItem("my-contacts", JSON.stringify(contacts))
-//}
-//}

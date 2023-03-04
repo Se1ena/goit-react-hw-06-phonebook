@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+
 import { List } from 'components/ContactList/ContactList.styled';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 
