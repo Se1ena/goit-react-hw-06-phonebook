@@ -19,7 +19,12 @@ export const Filter = () => {
   return (
     <>
       <Title>Find contacts by name</Title>
-      <input type="text" name="filter" placeholder='Search contact' onChange={handleChange} />
+      <input
+        type="text"
+        name="filter"
+        placeholder="Search contact"
+        onChange={handleChange}
+      />
     </>
   );
 };

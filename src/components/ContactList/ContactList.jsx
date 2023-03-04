@@ -6,7 +6,6 @@ import { List } from 'components/ContactList/ContactList.styled';
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import Notification from '../Notifications/Notifications';
 
-
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
   const nameFilter = useSelector(getFilter);
@@ -15,19 +14,18 @@ export const ContactList = () => {
     contact.name.toLowerCase().includes(nameFilter.toLowerCase())
   );
 
-  if(filteredContacts.length === 0) {
+  if (filteredContacts.length === 0) {
     return <Notification message="There is no contacts" />;
   }
 
   return (
-    <List>
-      {filteredContacts.map((contact, id) => (
-        <ContactItem
-          key={id}
-          contact={contact}
-        />
-      ))}
-    </List>
+    <div>
+      <List>
+        {filteredContacts.map((contact, id) => (
+          <ContactItem key={id} contact={contact} />
+        ))}
+      </List>
+    </div>
   );
 };
 
